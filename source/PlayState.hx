@@ -3,6 +3,7 @@ package;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.FlxG;
 import flxanimate.motion.AdjustColor;
 
 class PlayState extends FlxState
