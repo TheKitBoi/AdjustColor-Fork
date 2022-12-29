@@ -34,21 +34,21 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float)
 	{
-		if (FlxG.keys.Pressed.W)
+		if (FlxG.keys.pressed.W)
 			adjust.brightness -= elapsed * 0.1;
-		if (FlxG.keys.Pressed.S)
+		if (FlxG.keys.pressed.S)
 			adjust.brightness += elapsed * 0.1;
-		if (FlxG.keys.Pressed.R)
+		if (FlxG.keys.pressed.R)
 			adjust.contrast -= elapsed * 0.1;
-		if (FlxG.keys.Pressed.F)
+		if (FlxG.keys.pressed.F)
 			adjust.contrast += elapsed * 0.1;
-		if (FlxG.keys.Pressed.Y)
+		if (FlxG.keys.pressed.Y)
 			adjust.saturation -= elapsed * 0.1;
-		if (FlxG.keys.Pressed.H)
+		if (FlxG.keys.pressed.H)
 			adjust.saturation += elapsed * 0.1;
-		if (FlxG.keys.Pressed.I)
+		if (FlxG.keys.pressed.I)
 			adjust.hue -= elapsed * 0.1;
-		if (FlxG.keys.Pressed.K)
+		if (FlxG.keys.pressed.K)
 			adjust.hue += elapsed * 0.1;
 		
 		super.update(elapsed);
