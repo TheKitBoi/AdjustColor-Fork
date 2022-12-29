@@ -13,8 +13,8 @@ class PlayState extends FlxState
 	{
 		adjust.brightness = 0;
 		adjust.contrast = 0;
-		adjust.saturation = 100;
-		adjust.hue = 180;
+		adjust.saturation = 0;
+		adjust.hue = 0;
 
 		var background = FlxGridOverlay.create(10, 10);
 		add(background);
@@ -33,6 +33,23 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float)
 	{
+		if (FlxG.keys.Pressed.W)
+			adjust.brightness -= elapsed * 0.1;
+		if (FlxG.keys.Pressed.S)
+			adjust.brightness += elapsed * 0.1;
+		if (FlxG.keys.Pressed.R)
+			adjust.contrast -= elapsed * 0.1;
+		if (FlxG.keys.Pressed.F)
+			adjust.contrast += elapsed * 0.1;
+		if (FlxG.keys.Pressed.Y)
+			adjust.saturation -= elapsed * 0.1;
+		if (FlxG.keys.Pressed.H)
+			adjust.saturation += elapsed * 0.1;
+		if (FlxG.keys.Pressed.I)
+			adjust.hue -= elapsed * 0.1;
+		if (FlxG.keys.Pressed.K)
+			adjust.hue += elapsed * 0.1;
+		
 		super.update(elapsed);
 	}
 }
