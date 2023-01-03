@@ -12,11 +12,6 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
-		adjust.brightness = 0;
-		adjust.contrast = 0;
-		adjust.saturation = 0;
-		adjust.hue = 0;
-
 		var background = FlxGridOverlay.create(10, 10);
 		add(background);
 		super.create();
@@ -24,6 +19,10 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float)
 	{
+		adjust.brightness = 0;
+		adjust.contrast = 0;
+		adjust.saturation = 0;
+		adjust.hue = 0;
 		
 		var bf = new FlxSprite(AssetPaths.bf__png);
 		bf.screenCenter();
