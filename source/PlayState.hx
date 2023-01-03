@@ -19,6 +19,12 @@ class PlayState extends FlxState
 
 		var background = FlxGridOverlay.create(10, 10);
 		add(background);
+		super.create();
+	}
+
+	override public function update(elapsed:Float)
+	{
+		
 		var bf = new FlxSprite(AssetPaths.bf__png);
 		bf.screenCenter();
 		bf.antialiasing = true;
@@ -26,14 +32,11 @@ class PlayState extends FlxState
 		shader.matrix = adjust.calculateFinalFlatArray();
 		bf.shader = shader.shader;
 		add(bf);
+		
 		var filteredbf = new FlxSprite(bf.x + bf.width, bf.y, AssetPaths.filtered_bf__png);
 		filteredbf.antialiasing = true;
 		add(filteredbf);
-		super.create();
-	}
-
-	override public function update(elapsed:Float)
-	{
+		
 		if (FlxG.keys.pressed.W)
 			adjust.brightness -= elapsed * 0.1;
 		if (FlxG.keys.pressed.S)
