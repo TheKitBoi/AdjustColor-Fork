@@ -4,6 +4,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.FlxG;
+import flixel.math.FlxRandom;
 import flxanimate.motion.AdjustColor;
 
 class PlayState extends FlxState
@@ -12,10 +13,10 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
-		adjust.brightness = 0;
-		adjust.contrast = 0;
-		adjust.saturation = 0;
-		adjust.hue = 0;
+		adjust.brightness = FlxG.random.int(0, 255);
+		adjust.contrast = FlxG.random.int(0, 255);
+		adjust.saturation = FlxG.random.int(0, 255);
+		adjust.hue = FlxG.random.int(0, 255);
 
 		var background = FlxGridOverlay.create(10, 10);
 		add(background);
