@@ -35,6 +35,9 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float)
 	{
+		if (FlxG.keys.pressed.R)
+			PlayState.resetState();
+		
 		super.update(elapsed);
 	}
 }
