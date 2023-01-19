@@ -15,8 +15,8 @@ class PlayState extends FlxState
 	{
 		adjust.brightness = FlxG.random.int(0, 255);
 		adjust.contrast = FlxG.random.int(0, 255);
-		adjust.saturation = FlxG.random.int(0, 255);
-		adjust.hue = FlxG.random.int(0, 255);
+		adjust.saturation = FlxG.random.int(0, 100);
+		adjust.hue = FlxG.random.int(0, 180);
 
 		var background = FlxGridOverlay.create(10, 10);
 		add(background);
